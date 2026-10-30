@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jobly CMS — Admin (Demo)</title>
+<style>body{font-family:system-ui,Arial,sans-serif;margin:0;color:#222}header{background:#1a365d;color:#fff;padding:16px}.wrap{max-width:900px;margin:0 auto;padding:16px}.card{border:1px solid #ddd;border-radius:12px;padding:16px;margin:12px 0}.note{background:#fff3cd;padding:12px;border-radius:10px}</style></head>
+<body><header><div class="wrap">JOBLY — Jobs CMS <span style="color:#ccc">(Demo)</span></div></header>
+<div class="wrap"><div class="note"><b>Demo CMS only:</b> front-end demo, data in this browser (jb_* keys, CV file names only, no file content). No real server, login, payment or notification. Do NOT enter real candidate/employer data. Production needs a backend/WordPress build with secure CV handling.</div>
+<div class="card"><h2>Applications (from the demo form)</h2><div id="apps"></div></div>
+<div class="card"><h2>Employer enquiries (from the demo form)</h2><div id="emps"></div></div>
+<div class="card"><h2>Before launch — must confirm with Jobly</h2><ul><li>Real logo and brand colours (none verified — Facebook login-gated, directory shows none).</li><li>Real job categories, vacancies, employers and salaries.</li><li>WhatsApp: does 0306 8018142 support WhatsApp? None verified.</li><li>Email: none shown publicly.</li><li>CV handling: secure upload and storage in production (demo stores file names only).</li></ul></div>
+<p><a href="index.html">← Back to demo site</a></p></div>
+<script>try{var a=JSON.parse(localStorage.getItem('jb_applications')||'[]');document.getElementById('apps').innerHTML=a.length?a.map(function(x){return '<p><b>'+x.name+'</b> · '+x.phone+' · '+x.cat+' · exp '+x.exp+' yrs · CV: '+x.cv+'</p>'}).join(''):'<p>No demo applications yet.</p>';var e=JSON.parse(localStorage.getItem('jb_employers')||'[]');document.getElementById('emps').innerHTML=e.length?e.map(function(x){return '<p><b>'+x.company+'</b> ('+x.name+') · '+x.need+'</p>'}).join(''):'<p>No demo employer enquiries yet.</p>'}catch(e){}</script></body></html>
